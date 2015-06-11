@@ -12,4 +12,4 @@ Tuntikirjanpito
 8.6.2015 (ma) n. 10h koodausta
 9.6.2015 (ti) n. 7h koodausta
 10.6.2015 (ke) n. 12h koodausta ja testien väsäilyä
-11.6.2015 (to) n. 6h koodin viimeistelyä, testausta, Javadoc
+11.6.2015 (to) n. 7h koodin viimeistely, testausta, Javadoc
