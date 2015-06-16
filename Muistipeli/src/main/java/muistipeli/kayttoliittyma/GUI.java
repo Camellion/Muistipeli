@@ -93,7 +93,7 @@ public final class GUI extends JPanel implements ActionListener {
         kysyPelaajanNimi();
         kysyParienMaara();
         lauta = new JFrame();
-        lauta.setSize(400, 460);
+        lauta.setSize(360, 420);
         lauta.setTitle("Muistipeli");
         lauta.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         teeKortit();
@@ -119,11 +119,11 @@ public final class GUI extends JPanel implements ActionListener {
      * Kysyy pelattavien parien määrän.
      */
     private void kysyParienMaara() {
-        int parienMaara = Asetusikkuna.kysyTaso("Valitse joko 2, 8 tai 18 paria.");
+        int parienMaara = Asetusikkuna.kysyTaso("Anna pelattavien korttiparien määrä: (2, 8 tai 18)");
         while (!(parienMaara == 2
                 || parienMaara == 8
                 || parienMaara == 18)) {
-            parienMaara = Asetusikkuna.kysyTaso("Valitse joko 2, 8 tai 18 paria.");
+            parienMaara = Asetusikkuna.kysyTaso("Vain 2, 8 tai 18 ovat sallittuja! Anna korttiparien määrä:");
         }
         asetaKorttienMaara(parienMaara);
         korttiParienMaara = parienMaara;
@@ -206,9 +206,9 @@ public final class GUI extends JPanel implements ActionListener {
     private void laitaNimiJaLaskuritLaudalle() {
         Panel nimiJalaskuriPaneeli = new Panel();
         nimiJalaskuriPaneeli.setLayout(new GridLayout(1, 3));
-        nimiJalaskuriPaneeli.add(pelaajanNimi);
         nimiJalaskuriPaneeli.add(loydetyt);
         nimiJalaskuriPaneeli.add(yritykset);
+        nimiJalaskuriPaneeli.add(pelaajanNimi);
         lauta.add(nimiJalaskuriPaneeli, BorderLayout.NORTH);
     }
 
