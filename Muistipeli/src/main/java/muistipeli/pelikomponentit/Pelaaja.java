@@ -6,7 +6,7 @@ package muistipeli.pelikomponentit;
 public class Pelaaja {
 
     /**
-     * Pelaajan haluama nimi top-listoihin.
+     * Pelaajan haluama nimi, joka näkyy pelilaudalla.
      */
     private String kayttajatunnus;
 
@@ -16,7 +16,7 @@ public class Pelaaja {
     private int loydetytParit;
 
     /**
-     * Yritysten lukumäärä, joka tulee top-listoihin.
+     * Yritysten lukumäärä, joka näkyy pelilaudalla.
      */
     private int yritystenMaara;
 
@@ -66,7 +66,7 @@ public class Pelaaja {
     }
 
     /**
-     * Nollaa löydettyjen parien määrän, esim silloin, kun pelaaja arvaa väärin
+     * Nollaa löydettyjen parien määrän, esim. silloin, kun pelaaja arvaa väärin
      * tai peli päättyy.
      *     
 */

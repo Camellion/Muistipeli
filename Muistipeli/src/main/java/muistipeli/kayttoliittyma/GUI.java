@@ -19,47 +19,47 @@ import javax.swing.WindowConstants;
 public final class GUI extends JPanel implements ActionListener {
 
     /**
-     * pelilauta
+     * Pelilauta
      */
     private JFrame lauta;
 
     /**
-     * yritysten määrä
+     * Yritysten määrä.
      */
     private JLabel yritykset;
 
     /**
-     * löydettyjen parien määrä
+     * Löydettyjen parien määrä.
      */
     private JLabel loydetyt;
 
     /**
-     * yläpalkkiin tuleva pelaajan nimi
+     * Yläpalkkiin tuleva pelaajan nimi.
      */
     private JLabel pelaajanNimi;
 
     /**
-     * korttien painikkeet
+     * Korttien painikkeet
      */
     private JButton[] kortit;
 
     /**
-     * laudassa oleva lopetuspainike
+     * Laudassa oleva lopetuspainike.
      */
     private JButton lopetusPainike;
 
     /**
-     * laudassa oleva uuden pelin painike
+     * Laudassa oleva uuden pelin painike.
      */
     private JButton uusipeliPainike;
 
     /**
-     * paneeli säilyttää kortit, jotka tulevat laudalle
+     * Paneeli säilyttää kortit, jotka tulevat laudalle.
      */
     private Panel paneeli;
 
     /**
-     * pelaajan syöttämä parien määrä
+     * Pelaajan syöttämä parien määrä.
      */
     private int korttiParienMaara;
 
@@ -70,19 +70,19 @@ public final class GUI extends JPanel implements ActionListener {
 
     /**
      * Pelilogiikka-luokan kaanto-metodista tuleva ilmoitus, että mitä
-     * havaittiin kahta korttia painettaessa
+     * havaittiin kahta korttia painettaessa.
      */
     private String kaannetytKortit;
 
     /**
-     * Ajan kulkua operoiva Aika-luokka
+     * Ajan kulkua operoiva Aika-luokka.
      */
     private Aika timer;
 
     public GUI() {
         peli = new Pelilogiikka();
         aloitaPeli();
-        timer = new Aika(this, 600);
+        timer = new Aika(this, 1000);
 
     }
 
@@ -93,8 +93,8 @@ public final class GUI extends JPanel implements ActionListener {
         kysyPelaajanNimi();
         kysyParienMaara();
         lauta = new JFrame();
-        lauta.setSize(500, 600);
-        lauta.setTitle("Olutmuistipeli<3");
+        lauta.setSize(400, 460);
+        lauta.setTitle("Muistipeli");
         lauta.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         teeKortit();
         teeNimiJaLaskurit();
@@ -108,7 +108,7 @@ public final class GUI extends JPanel implements ActionListener {
     }
 
     /**
-     * kysyy pelaajalta nimen asetusikkunan avulla.
+     * Kysyy pelaajalta nimen asetusikkunan avulla.
      */
     private void kysyPelaajanNimi() {
         peli.getPelaaja().asetaNimi(Asetusikkuna.kysyNimi("Anna nimesi: "));
@@ -116,7 +116,7 @@ public final class GUI extends JPanel implements ActionListener {
     }
 
     /**
-     * Kysyy parien määrän laudalle.
+     * Kysyy pelattavien parien määrän.
      */
     private void kysyParienMaara() {
         int parienMaara = Asetusikkuna.kysyTaso("Valitse joko 2, 8 tai 18 paria.");
@@ -132,7 +132,7 @@ public final class GUI extends JPanel implements ActionListener {
     /**
      * Tekee oikean määrän kortteja.
      *
-     * @param korttiParienMaara
+     * @param   parienMaara
      */
     public void asetaKorttienMaara(int parienMaara) {
         kortit = new JButton[2 * parienMaara];
@@ -151,7 +151,7 @@ public final class GUI extends JPanel implements ActionListener {
     }
 
     /**
-     * Tekee lopetus -ja uusipeli-painikkeet.
+     * Tekee lopetus- ja uusipeli-painikkeet.
      */
     private void teePainikkeet() {
         lopetusPainike = new JButton("Lopeta");
@@ -162,7 +162,7 @@ public final class GUI extends JPanel implements ActionListener {
     }
 
     /**
-     * Tekee laskuri -ja nimiOtsikot .
+     * Tekee laskuri -ja nimiotsikot.
      */
     private void teeNimiJaLaskurit() {
         loydetyt = new JLabel("Löydetyt parit: ");
@@ -195,8 +195,8 @@ public final class GUI extends JPanel implements ActionListener {
     private void laitaPainikkeetLaudalle() {
         Panel painikePaneeli = new Panel();
         painikePaneeli.setLayout(new GridLayout(1, 2));
-        painikePaneeli.add(lopetusPainike);
         painikePaneeli.add(uusipeliPainike);
+        painikePaneeli.add(lopetusPainike);
         lauta.add(painikePaneeli, BorderLayout.SOUTH);
     }
 
@@ -232,8 +232,8 @@ public final class GUI extends JPanel implements ActionListener {
     /**
      * Poistaa pelilaudalta löydetyn parin kokonaan.
      *
-     * @param ensimmainen
-     * @param toinen
+     * @param   ensimmainen
+     * @param   toinen
      */
     private void poistaKortitPelilautaltaNiidenOllessaSamat(int ensimmainen, int toinen) {
         kortit[ensimmainen].setVisible(false);
@@ -243,8 +243,8 @@ public final class GUI extends JPanel implements ActionListener {
     /**
      * Kääntää kortit takaisin väärin päin.
      *
-     * @param ensimmainen käännetty kortti
-     * @param toinen käännetty kortti
+     * @param   ensimmainen käännetty kortti
+     * @param   toinen  käännetty kortti
      */
     public void kaannaKaannetytTakaisinJotkaEivatOlleetPari(int ensimmainen, int toinen) {
         kortit[ensimmainen].setText("");
@@ -306,7 +306,7 @@ public final class GUI extends JPanel implements ActionListener {
      * joka laittaa eteenpäin joko kutsun poistaa kortit laudalta tai kääntää ne
      * takaisin väärin päin.
      *
-     * @param e mistä painetaan
+     * @param   e   mistä painetaan
      */
     @Override
     public void actionPerformed(ActionEvent e) {

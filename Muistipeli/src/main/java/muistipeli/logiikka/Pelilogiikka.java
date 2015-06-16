@@ -10,22 +10,22 @@ import java.util.ArrayList;
 public class Pelilogiikka {
 
     /**
-     * vuoron ensimmäinen nostettu kortti.
+     * Vuoron ensimmäinen nostettu kortti.
      */
     private int ekaKortti;
 
     /**
-     * vuoron toinen nostettu kortti.
+     * Vuoron toinen nostettu kortti.
      */
     private int tokaKortti;
 
     /**
-     * kertoo onko kortti ensimmäinen vai toinen nostovuorossa oleva kortti.
+     * Kertoo onko kortti ensimmäinen vai toinen nostovuorossa oleva kortti.
      */
     private boolean ekaNostovuorossa;
 
     /**
-     * pelaajaa ilmentävä pelaaja-olio, joka sisältää pelaajan tunnuksen sekä
+     * Pelaajaa ilmentävä pelaaja-olio, joka sisältää pelaajan tunnuksen sekä
      * yritysten ja löydettyjen parien määrän.
      */
     private Pelaaja pelaaja;
@@ -66,8 +66,8 @@ public class Pelilogiikka {
      * käännettynä. Jos kortti on ensimmäinen käännettävä, sen järjestys
      * taulussa talletetaan.
      *
-     * @param moneskoKortti kertoo monesko käännetty kortti on.
-     * @return kommentti kertoo mitä on tapahtuu missäkin vaiheessa.
+     * @param   moneskoKortti   kertoo monesko käännetty kortti on.
+     * @return  kommentti kertoo mitä on tapahtuu missäkin vaiheessa.
      */
     public String kaanto(int moneskoKortti) {
         if (ekaNostovuorossa) {
@@ -91,9 +91,9 @@ public class Pelilogiikka {
      * Palauttaa käyttöliittymälle merkkijonon, joka kertoo onko kaksi
      * käännettyä korttia pari vai ei.
      *
-     * @param pelaaja Pelaamassa oleva pelaaja
-     * @param moneskoKortti kertoo monesko kortti on taulussa.
-     * @return kommentti kertoo mitä tapahtuu missäkin vaiheessa.
+     * @param   pelaaja Pelaamassa oleva pelaaja
+     * @param   moneskoKortti   kertoo monesko kortti on taulussa.
+     * @return  kommentti kertoo mitä tapahtuu missäkin vaiheessa.
      *
      */
     private String toinenKaanto(int moneskoKortti, Pelaaja pelaaja) {
@@ -107,11 +107,11 @@ public class Pelilogiikka {
     }
 
     /**
-     * tarkistaa ovatko nostetut kaksi korttia pari.
+     * Tarkistaa ovatko nostetut kaksi korttia pari.
      *
-     * @param ensimmainen ensimmäinen nostettu
-     * @param toinen toinen nostettu
-     * @return tosi tai epätosi
+     * @param   ensimmainen ensimmäinen nostettu
+     * @param   toinen  toinen nostettu
+     * @return  tosi tai epätosi
      */
     public boolean tarkistaOnkoNostetutKortitPari(int ensimmainen, int toinen) {
         if (lauta.getListanArvot().get(ensimmainen).equals(lauta.getListanArvot().get(toinen))) {
@@ -163,8 +163,8 @@ public class Pelilogiikka {
         return ekaNostovuorossa;
     }
 
-    public void asetaEnsimmainenNostovuorossaUudenPelinAlkuun(boolean x) {
-        ekaNostovuorossa = x;
-    }
+    //public void asetaEnsimmainenNostovuorossaUudenPelinAlkuun(boolean x) {
+    //    ekaNostovuorossa = x;
+    //}
 
 }

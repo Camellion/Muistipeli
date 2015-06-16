@@ -3,25 +3,25 @@ package muistipeli.kayttoliittyma;
 import javax.swing.*;
 
 /**
- * Luokka tekee ikkunoita, joissa kysytään käyttäjältä kysymyksiä
+ * Luokka tekee ikkunoita, joissa kysytään käyttäjältä kysymyksiä.
  */
 public class Asetusikkuna {
 
     /**
-     * kysyy käyttäjältä nimen.
+     * Kysyy käyttäjältä nimen.
      *
-     * @param kysymys näkyvissä oleva kysymys.
+     * @param   kysymys näkyvissä oleva kysymys.
      */
     public static String kysyNimi(String kysymys) {
         return JOptionPane.showInputDialog(kysymys);
     }
 
     /**
-     * kysyy käyttäjältä korttiparien määrän. ainoastaan 2, 8, ja 18 kelpaavat.
+     * Kysyy käyttäjältä korttiparien määrän. Ainoastaan 2, 8, ja 18 kelpaavat.
      *
-     * @param kysymys näkyvissä oleva kysymys.
+     * @param   kysymys näkyvissä oleva kysymys.
      *
-     * @return luku kokonaisluku, joka on käyttäjän antama vastaus kysymykseen
+     * @return  luku kokonaisluku, joka on käyttäjän antama vastaus kysymykseen
      */
     public static int kysyTaso(String kysymys) {
         String tarjottuLuku;

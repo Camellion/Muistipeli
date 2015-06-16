@@ -15,10 +15,10 @@ public class Aika extends Timer implements ActionListener {
     private GUI kayttis;
 
     /**
-     * Luo timerin
+     * Luo timerin.
      *
-     * @param kayttis = käyttöliittymä
-     * @param aika on määritelty aika jonka timer pyörii ennen kuin käyttää
+     * @param   kayttis = käyttöliittymä
+     * @param   aika    on määritelty aika jonka timer pyörii ennen kuin käyttää
      * metodiaan
      */
     public Aika(GUI kayttis, int aika) {
@@ -26,18 +26,16 @@ public class Aika extends Timer implements ActionListener {
         this.kayttis = kayttis;
         this.addActionListener(this);
         this.setRepeats(false);
-
     }
 
     /**
-     * ajan loputtua kutsuu metodia, joka suorittaa kääntämistoiminnot
+     * Ajan loputtua kutsuu metodia, joka suorittaa kääntämistoiminnot.
      *
-     * @param e , kun aika loppuu
+     * @param   e   kun aika loppuu
      */
     @Override
     public void actionPerformed(ActionEvent e) {
         kayttis.timerinAjanPaatteeksiSuoritettavatKaannot();
-
     }
 
 }

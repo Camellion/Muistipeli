@@ -6,17 +6,16 @@ import java.util.Collections;
 public class Pelilauta {
 
     /**
-     * korttien arvot arraylistissa
+     * Korttien arvot ArrayListissa.
      */
     private ArrayList<Integer> arvot;
 
     /**
-     * luo pelilauta-olion, uuden arraylistin ja laskee korttien määrän
+     * Luo Pelilauta-olion, uuden ArrayListin ja laskee korttien määrän
      * pelilaudan koon mukaan.
      */
     public Pelilauta() {
         this.arvot = new ArrayList<>();
-
     }
 
     /**
@@ -49,7 +48,6 @@ public class Pelilauta {
 
     public String getKorttiMerkkijonona(int kortinJarjestysnumero) {
         return Integer.toString(arvot.get(kortinJarjestysnumero));
-
     }
 
     public void asetaKorteilleArvot(ArrayList<Integer> eriArvot) {
