@@ -46,6 +46,7 @@ public class Pelaaja {
 
     /**
      * Palauttaa pelaajan antaman nimen.
+     * @return  kayttajatunnus  pelaajan nimi
      */
     public String getNimi() {
         return kayttajatunnus;
@@ -53,6 +54,7 @@ public class Pelaaja {
 
     /**
      * Palauttaa pelaajan suorittamien yritysten määrän.
+     * @return  yritystenMaara  suoritettujen yritysten määrä
      */
     public int getYritystenMaara() {
         return yritystenMaara;
@@ -60,6 +62,7 @@ public class Pelaaja {
 
     /**
      * Palauttaa pelaajan tähänastisten löydettyjen parien määrän.
+     * @return  loydetytParit   löydettyjen parien määrä tähänasti
      */
     public int getloydetytParit() {
         return loydetytParit;
@@ -69,7 +72,7 @@ public class Pelaaja {
      * Nollaa löydettyjen parien määrän, esim. silloin, kun pelaaja arvaa väärin
      * tai peli päättyy.
      *     
-*/
+    */
     public void nollaaPariLaskuri() {
         loydetytParit = 0;
     }
@@ -84,7 +87,7 @@ public class Pelaaja {
     /**
      * Asettaa pelaajan antaman nimen Pelaaja-oliolle.
      *
-     * @param nimi
+     * @param   nimi    pelaajan antama nimi Pelaaja-oliolle
      */
     public void asetaNimi(String nimi) {
         kayttajatunnus = nimi;

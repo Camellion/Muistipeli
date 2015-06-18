@@ -123,6 +123,7 @@ public class Pelilogiikka {
     /**
      * Seuraavat metodit ovat kaikki set- tai get-metodeita.
      */
+
     public void asetaOnkoKaksiKaannetty(boolean onkoKaksiKaannetty) {
         kaksiKorttiaKaannetty = onkoKaksiKaannetty;
     }

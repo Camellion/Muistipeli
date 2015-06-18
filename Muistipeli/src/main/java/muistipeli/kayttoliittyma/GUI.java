@@ -132,7 +132,7 @@ public final class GUI extends JPanel implements ActionListener {
     /**
      * Tekee oikean määrän kortteja.
      *
-     * @param   parienMaara
+     * @param   parienMaara pelattavien korttiparien lukumäärä
      */
     public void asetaKorttienMaara(int parienMaara) {
         kortit = new JButton[2 * parienMaara];

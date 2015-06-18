@@ -22,6 +22,7 @@ public class Pelilauta {
      * Jakaa korttien määrän kahdella ja lisää jokaisen arvon kaksi kertaa
      * listaan. Lopuksi shufflella sekoittaa arvojen järjestyksen
      * sattumanvaraiseksi.
+     * @param   korttienmaara   korttien lukumäärä pelissä
      */
     public void arvotListaan(int korttienmaara) {
         for (int i = 0; i < korttienmaara / 2; i++) {
@@ -34,6 +35,7 @@ public class Pelilauta {
     /**
      * Seuraavat metodit ovat kaikki get-metodeita.
      */
+    
     public int getArvojenMaara() {
         return arvot.size();
     }

@@ -11,6 +11,7 @@ public class Asetusikkuna {
      * Kysyy käyttäjältä nimen.
      *
      * @param   kysymys näkyvissä oleva kysymys.
+     * @return  JOptionPane.showInputDialog(kysymys)    merkkijono, joka on käyttäjän antama vastaus kysymykseen
      */
     public static String kysyNimi(String kysymys) {
         return JOptionPane.showInputDialog(kysymys);
