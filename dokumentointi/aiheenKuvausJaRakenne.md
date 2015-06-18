@@ -15,3 +15,7 @@ Muuten peli käntää parin takaisin väärinpäin.
 Muuta:
 "Lopetus" -painike päättää pelin ja "Uusi peli" -painike aloittaa uuden pelin.
 
+
+Rakennekuvaus:
+
+Muistipelissä käyttöliittymä luokka GUI käyttää luokkaa Pelilogiikka, joka sisältää pelin käyttölogiikan. Pelilogiikka puolestaan tuntee luokan Pelilauta, joka sisältää pelikortit ja luokan Pelaaja. Luokka Pelaaja puolestaan pitää kirjaa pelaajan tiedoista, kuten nimestä, yrityksistä ja löydetyistä pareista.
